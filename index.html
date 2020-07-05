@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- swiper CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+    <!-- awesomefont CDN -->
+    <script src="https://kit.fontawesome.com/69fd600045.js" crossorigin="anonymous"></script>
+
+    <!-- my CSS CDN -->
+    <link rel="stylesheet" href="./public/css/style.css" />
+
+    <title>Yolita Bakery</title>
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+
+    <div id="header-outer-box">
+        <header>
+            <div class="container">
+                <a href="./index.html" class="header-box" id="logo">
+                    <img src="./public/img/yolita-logo.png" alt="">
+                </a>
+                <nav class="header-box">
+                    <ul class="drop-down-menu">
+                        <li class="main-menu">
+                            <a href="#" class="main-title">品牌故事</a>
+                        </li>
+                        <li class="main-menu">
+                            <a href="#" class="main-title">最新消息</a>
+                        </li>
+                        <li class="main-menu">
+                            <a href="#" class="main-title">門市據點</a>
+                        </li>
+                        <li class="main-menu">
+                            <a href="#" class="main-title">聯絡我們</a>
+                        </li>
+                        <li class="main-menu">
+                            <a href="#" class="main-title">商品專區</a>
+                            <ul>
+                                <li class="second-menu">
+                                    <a href="#">全部商品</a>
+                                </li>
+                                <li class="second-menu">
+                                    <a href="#">生日蛋糕</a>
+                                </li>
+                                <li class="second-menu">
+                                    <a href="#">美味麵包</a>
+                                </li>
+                                <li class="second-menu">
+                                    <a href="#">點心餐盒</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="header-box" id="header-pic">
+                    <div id="search"><img src="./public/img/search.png" alt=""></div>
+                    <div id="cart"><img src="./public/img/cart.png" alt=""></div>
+                    <div id="menu"><img src="./public/img/menu.png" alt=""></div>
+                </div>
+            </div>
+        </header>
+        <div id="line"></div>
+        <form action="/search">
+            <input type="text" placeholder="請輸入關鍵字" id="search-form">
+        </form>
+    </div>
+
+
+
+    <div id="rwd-nav-title">
+        <div id="rwd-nav-cross"><img src="./public/img/cross.png" alt=""></div>
+        <div id="rwd-title-box">
+            <div class="rwd-title" id="home"><a href="#">首頁</a></div>
+            <div class="rwd-title"><a href="#">訊息公告</a></div>
+            <div class="rwd-title"><a href="#">商品專區</a></div>
+            <div class="rwd-title"><a href="#">主題精選</a></div>
+            <div class="rwd-title"><a href="#">文章專區</a></div>
+            <div class="rwd-title"><a href="#">登入/註冊</a></div>
+        </div>
+    </div>
+
+
+    <!-- 購物車 -->
+    <div id="check-list">
+        <div id="leave">
+            <img src="./public/img/cross.png" alt="">
+        </div>
+        <div id="check-product-box">
+            <div class="check-product">
+                <img src="./public/img/product1.jpg" alt="" class="check-pic">
+                <h5 class="product-name">究好 JUS PARFAIT｜瑪鐵(Mocktail) 系列－ 究是剛...</h5>
+                <p class="product-num">x 1</p>
+                <h5 class="check-price">NT$1060</h5>
+            </div>
+            <div class="check-product">
+                <img src="./public/img/product1.jpg" alt="" class="check-pic">
+                <h5 class="product-name">究好 JUS PARFAIT｜瑪鐵(Mocktail) 系列－ 究是剛...</h5>
+                <p class="product-num">x 1</p>
+                <h5 class="check-price">NT$1060</h5>
+            </div>
+            <div id="total">
+                <div id="total-text">
+                    <h5 id="total-title">總金額</h5>
+                    <h5 id="total-price">NT$1060</h5>
+                </div>
+                <button id="RightNow">立即結帳</button>
+                <button id="check-btn">前往結帳</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 確認加入購物車 -->
+    <div id="buy-alert">
+        <img src="./public/img/check.png" alt="">
+        <p>商品已放入購物車</p>
+    </div>
+
+
+    <!-- 輪播圖 -->
+    <!-- Swiper -->
+    <div class="swiper-container home-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide bg hs-pic"
+                style="background-image:url(https://images.unsplash.com/photo-1500275259408-14be096a87cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)">
+                <img src="https://images.unsplash.com/photo-1500275259408-14be096a87cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                    alt="">
+            </div>
+            <div class="swiper-slide bg hs-pic"
+                style="background-image:url(https://images.unsplash.com/photo-1585937777498-c0abcfe1bf17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80)">
+                <img src="https://images.unsplash.com/photo-1585937777498-c0abcfe1bf17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80"
+                    alt="">
+            </div>
+            <div class="swiper-slide bg hs-pic"
+                style="background-image:url(https://images.unsplash.com/photo-1591741991847-276a658e58e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80)">
+                <img src="https://images.unsplash.com/photo-1591741991847-276a658e58e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+                    alt="">
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination reco-sp"></div>
+
+        <!-- 箭頭 -->
+        <div class="Rprev arrow-prev">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="Rnext arrow-next">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+
+
+    <!-- 商品分類 -->
+    <div class="container box" id="prod-clas">
+        <div class="clas-pic" id="clas-bdcake">
+            <a href="#">
+                <div class="hover-color">
+                    <h2>生日蛋糕</h2>
+                </div>
+            </a>
+        </div>
+        <div class="clas-pic" id="clas-bread">
+            <a href="#">
+                <div class="hover-color">
+                    <h2>美味麵包</h2>
+                </div>
+        </div>
+        <div class="clas-pic" id="clas-snake">
+            <a href="#">
+                <div class="hover-color">
+                    <h2>點心禮盒</h2>
+                </div>
+        </div>
+    </div>
+
+
+    <!-- 精選商品 -->
+    <div class="box" id="sele-prod">
+        <div class="container px-4">
+            <h1>精選商品</h1>
+            <div class="card-group product-group1 ">
+                <div class="card border-0  col-lg-3 col-md-6 col-sm-6 col-6 px-2">
+                    <div class="product-pic pic" id="product-pic1">
+                        <div class="hover-color">
+                            <a href="#">
+                                <div id="link-box"></div>
+                            </a>
+                            <div class="save-btn">
+                                <!-- 挖空 -->
+                                <i class="far fa-heart"></i>
+                                <!-- 填滿 -->
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="buy-btn">加入購物車</div>
+                    </div>
+                    <div class="card-body px-0 py-2 product-text">
+                        <h5 class="card-title">藍莓塔</h5>
+                        <div class="price">
+                            <h5 class="card-price">NT$450</h5>
+                        </div>
+                        <div class="rwd-icon">
+                            <img src="./public/img/cart.png" alt="" class="rwd-cart">
+                            <div class="rwd-save-btn">
+                                <!-- 挖空 -->
+                                <i class="far fa-heart"></i>
+                                <!-- 填滿 -->
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 col-lg-3 col-md-6 col-sm-6 col-6 px-2">
+                    <div class="product-pic pic" id="product-pic2">
+                        <div class="hover-color">
+                            <a href="#">
+                                <div id="link-box"></div>
+                            </a>
+                            <div class="save-btn">
+                                <!-- 挖空 -->
+                                <i class="far fa-heart"></i>
+                                <!-- 填滿 -->
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="buy-btn">加入購物車</div>
+                    </div>
+                    <div class="card-body px-0 py-2 product-text">
+                        <h5 class="card-title">薑餅蛋糕</h5>
+                        <div class="price">
+                            <h5 class="card-price">NT$480</h5>
+                        </div>
+                        <div class="rwd-icon">
+                            <img src="./public/img/cart.png" alt="" class="rwd-cart">
+                            <div class="rwd-save-btn">
+                                <!-- 挖空 -->
+                                <i class="far fa-heart"></i>
+                                <!-- 填滿 -->
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 col-lg-3 col-md-6 col-sm-6 col-6 px-2">
+                    <div class="product-pic pic" id="product-pic3">
+                        <div class="hover-color">
+                            <a href="#">
+                                <div id="link-box"></div>
+                            </a>
+                            <div class="save-btn">
+                                <!-- 挖空 -->
+                                <i class="far fa-heart"></i>
+                                <!-- 填滿 -->
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="buy-btn">加入購物車</div>
+                    </div>
+                    <div class="card-body px-0 py-2 product-text">
+                        <h5 class="card-title">蛋糕小總匯</h5>
+                        <div class="price">
+                            <h5 class="card-price">NT$140</h5>
+                        </div>
+                        <div class="rwd-icon">
+                            <img src="./public/img/cart.png" alt="" class="rwd-cart">
+                            <div class="rwd-save-btn">
+                                <!-- 挖空 -->
+                                <i class="far fa-heart"></i>
+                                <!-- 填滿 -->
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 col-lg-3 col-md-6 col-sm-6 col-6 px-2">
+                    <div class="product-pic pic" id="product-pic4">
+                        <div class="hover-color">
+                            <a href="#">
+                                <div id="link-box"></div>
+                            </a>
+                            <div class="save-btn">
+                                <!-- 挖空 -->
+                                <i class="far fa-heart"></i>
+                                <!-- 填滿 -->
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="buy-btn">加入購物車</div>
+                    </div>
+                    <div class="card-body px-0 py-2 product-text">
+                        <h5 class="card-title">布朗尼甜甜圈</h5>
+                        <div class="price">
+                            <h5 class="card-price">NT$250</h5>
+                        </div>
+                        <div class="rwd-icon">
+                            <img src="./public/img/cart.png" alt="" class="rwd-cart">
+                            <div class="rwd-save-btn">
+                                <!-- 挖空 -->
+                                <i class="far fa-heart"></i>
+                                <!-- 填滿 -->
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="box" id="aboutus">
+        <div class="container px-4">
+            <h1>關於我們</h1>
+            <div class="about-text">
+                <p>Yuki、Lina、Reta是三個到北部求學的南部女孩，三人一同在北部攻讀餐飲系，感情非常要好時常形影不離彼此，儘管意在他鄉，三人彼此能夠照應也不會感到孤獨。然而還是少了那份來自家鄉的草莓香，在家鄉三餐總是少不了草莓，來到北部頓時失去了這份”家香”，難免還是令人黯然神傷...
+                </p>
+            </div>
+            <div class="lookmore-box">
+                <button class="lookmore">看更多</button>
+            </div>
+        </div>
+        <div class="about-pic"></div>
+    </div>
+
+
+    <!-- 最新消息 -->
+    <div class="container box px-3" id="new">
+        <h1>最新消息</h1>
+        <div class="new-box">
+            <div class="row px-3">
+                <div class="col-sm-12 col-mb-12 col-lg-6 my-0 new-pic" id="new-pic1">
+                </div>
+                <div class="new-text col-sm-12 col-mb-12 col-lg-6 px-3">
+                    <h2>一月新品溫暖上市</h2>
+                    <p>冷颼颼的新年，有想好回家鄉的伴手禮了嗎？</p>
+                    <p>Yolita為您精心準備暖心的過年禮盒、蛋糕</p>
+                    <p>讓您可以陪伴家人溫暖度過新年喔！</p>
+                </div>
+            </div>
+        </div>
+        <div class="new-box">
+            <div class="row px-3">
+                <div class="col-sm-12 col-mb-12 col-lg-6 order-lg-last my-0 new-pic" id="new-pic2">
+
+                </div>
+                <div class="new-text col-sm-12 col-mb-12 col-lg-6 px-3">
+
+                    <p>走入絕美秘境，遇見未知旅程；踏上鄉間之旅，尋訪台灣的根；躍入海中，探索海底生物
+                        －你開始期待，有一場安心又美好的私人體驗。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer-box">
+        <footer class="container">
+            <div class="row ">
+                <div id="footer-menu" class="col-lg-8 col-md-12 col-sm-12 col-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 footer-title py-3">
+                            <h5 class="footer-main-title">訊息公告</h5>
+                            <div class="footer-second-title pt-1">
+                                <div><a href="#">優惠資訊</a></div>
+                                <div><a href="#">產品資訊</a></div>
+                                <div><a href="#">徵才資訊</a></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 footer-title py-3">
+                            <h5 class="footer-main-title">商品專區</h5>
+                            <div class="footer-second-title pt-1">
+                                <div><a href="#">家具</a></div>
+                                <div><a href="#">衣服</a></div>
+                                <div><a href="#">文具</a></div>
+                                <div><a href="#">玩具</a></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 footer-title py-3">
+                            <h5 class="footer-main-title">主題精選</h5>
+                            <div class="footer-second-title pt-1">
+                                <div><a href="#">母親節優惠</a></div>
+                                <div><a href="#">清明節</a></div>
+                                <div><a href="#">端午節</a></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 footer-title py-3">
+                            <h5 class="footer-main-title">文章專區</h5>
+                            <div class="footer-second-title pt-1">
+                                <div><a href="#">生活類</a></div>
+                                <div><a href="#">休閒類</a></div>
+                                <div><a href="#">嬰兒類</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-4 col-md-12 col-sm-12 col-12 py-3" id="contact">
+                    <h5 class="footer-main-title">聯絡我們</h5>
+                    <div class="pt-1">
+                        <p>客服時間：週一至週五10:00-18:00</p>
+                        <p>客服專線：(02)2368-3682</p>
+                        <p>客服信箱：service@cubico-inc.com</p>
+                    </div>
+                </div>
+            </div>
+            <p id="CopyRight">Copyright &copy;Dymain All Rights Reserved.</p>
+
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- swiper JS CDN -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <!-- My JS CDN -->
+    <script src="./public/js/index.js"></script>
+
+
+</body>
+
+</html>
