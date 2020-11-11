@@ -1,1 +1,248 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  color: #4d4d4d;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+  color: #4d4d4d;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+header .logo {
+  height: 85px;
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+  padding-top: 20px;
+}
+
+header .logo img {
+  height: 45px;
+  display: block;
+  margin: 0 auto;
+}
+
+header .main-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .main-bar nav {
+  height: 50px;
+}
+
+header .main-bar nav ul {
+  list-style: none;
+  line-height: 50px;
+}
+
+header .main-bar nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+header .main-bar nav ul li a {
+  color: #4d4d4d;
+  padding: 0 28px;
+  cursor: pointer;
+}
+
+header .main-bar nav ul li:hover a {
+  color: #ee6160;
+  font-weight: 500;
+}
+
+header .main-bar nav ul li:hover .hover-bar {
+  width: 80%;
+}
+
+header .main-bar nav ul .hover-bar {
+  width: 0;
+  height: 3px;
+  background-color: #ec8989;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .main-bar .icon {
+  line-height: 50px;
+}
+
+header .main-bar .icon a {
+  padding: 0 15px;
+}
+
+header .main-bar .icon a img {
+  height: 20px;
+}
+
+#check-list {
+  display: none;
+}
+
+.swiper-container#banner {
+  width: 100% !important;
+  height: 450px;
+  z-index: 0 !important;
+}
+
+.swiper-container#banner .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 0 !important;
+}
+
+.swiper-container#banner .swiper-wrapper .swiper-slide {
+  z-index: 0 !important;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.swiper-container#banner .swiper-wrapper .swiper-slide img {
+  display: none;
+}
+
+#prod-clas {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -60px auto 0;
+  padding: 60px 70px;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(150, 150, 150, 0.5);
+          box-shadow: 0 2px 6px 0 rgba(150, 150, 150, 0.5);
+  z-index: 300 !important;
+}
+
+#prod-clas .prod-clas {
+  width: 25%;
+}
+
+#prod-clas .prod-clas img {
+  height: 100px;
+  display: block;
+  margin: 0 auto 25px;
+}
+
+#prod-clas .prod-clas h3 {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.main-title {
+  margin-top: 60px;
+  color: #ee6160;
+  letter-spacing: 1.14px;
+  text-align: center;
+  font-size: 24px;
+}
+
+#product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#product .product {
+  width: 25%;
+  padding: 0 8px;
+}
+
+#product .product .pic {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+
+#product .product .pic .overflow-box {
+  overflow: hidden;
+}
+
+#product .product .pic .overflow-box .pic-box {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#product .product .pic .overflow-box .pic-box img {
+  display: none;
+}
+
+#product .product .pic .hover-icon {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 17px;
+}
+
+#product .product .pic .hover-icon .icon-box {
+  position: relative;
+  background-color: #fff;
+}
+
+#product .product .pic .hover-icon .icon-box img {
+  position: absolute;
+  width: 35px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#product .product .pic .hover-icon .icon-box:hover {
+  background-color: #F2A09F;
+}
+
+#product .product .pic .hover-icon .icon-box:hover img {
+  top: 35px;
+}
+
+#product .product .pic .cart {
+  right: 60px;
+}
+
+#product .product .pic .save {
+  right: 12px;
+}
+/*# sourceMappingURL=style.css.map */

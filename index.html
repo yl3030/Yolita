@@ -27,21 +27,30 @@
         <div class="logo">
             <img src="./public/img/logo.png" alt="logo">
         </div>
-        <div class="main-bar">
-            <img src="./public/img/logo.png" alt="" class="logo">
+        <div class="main-bar container">
             <nav>
                 <ul>
-                    <li>商品專區</li>
-                    <li>品牌故事</li>
-                    <li>最新消息</li>
-                    <li>門市據點</li>
-                    <li>聯絡我們</li>
+                    <li><a href="#">商品專區</a>
+                        <div class="hover-bar"></div>
+                    </li>
+                    <li><a>品牌故事</a>
+                        <div class="hover-bar"></div>
+                    </li>
+                    <li><a>最新消息</a>
+                        <div class="hover-bar"></div>
+                    </li>
+                    <li><a>門市據點</a>
+                        <div class="hover-bar"></div>
+                    </li>
+                    <li><a>聯絡我們</a>
+                        <div class="hover-bar"></div>
+                    </li>
                 </ul>
             </nav>
             <div class="icon">
-                <img src="./public/img/cart.png" alt="購物車">
-                <img src="./public/img/search.png" alt="搜尋">
-                <img src="./public/img/user.png" alt="會員專區">
+                <a href="#"><img src="./public/img/cart.png" alt="購物車"></a>
+                <a href="#"><img src="./public/img/search.png" alt="搜尋"></a>
+                <a href="#"><img src="./public/img/user.png" alt="會員專區"></a>
             </div>
         </div>
     </header>
@@ -126,20 +135,20 @@
 
     <!-- 輪播圖 -->
     <!-- Swiper -->
-    <div class="swiper-container">
+    <div class="swiper-container" id="banner">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(./public/img/swipe1.png)">
-                <img src="./public/img/swipe1.png" alt="">
+            <div class="swiper-slide" style="background-image:url(./public/img/swipe1.jpg)">
+                <img src="./public/img/swipe1.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="background-image:url(./public/img/swipe2.png)">
-                <img src="./public/img/swipe2.png" alt="">
+            <div class="swiper-slide" style="background-image:url(./public/img/swipe2.jpg)">
+                <img src="./public/img/swipe2.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="background-image:url(./public/img/swipe3.png)">
-                <img src="./public/img/swipe3.png" alt="">
+            <div class="swiper-slide" style="background-image:url(./public/img/swipe3.jpg)">
+                <img src="./public/img/swipe3.jpg" alt="">
             </div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination container" id="banner-pag"></div>
 
         <!-- 箭頭 -->
         <div class="Sprev arrow">
@@ -152,29 +161,39 @@
 
 
     <!-- 商品分類 -->
-    <div class="container" id="prod-clas">
-        <div class="prod-clas">
-            <img src="./public/img/cake.png" alt="蛋糕">
-            <h3>蛋糕</h3>
-        </div>
-        <div class="prod-clas">
-            <img src="./public/img/bread.png" alt="麵包">
-            <h3>麵包</h3>
-        </div>
-        <div class="prod-clas">
-            <img src="./public/img/gift.png" alt="禮盒">
-            <h3>禮盒</h3>
-        </div>
-        <div class="prod-clas">
-            <img src="./public/img/snake.png" alt="點心">
-            <h3>點心</h3>
+    <div class="container" style="z-index: 3000;">
+        <div id="prod-clas">
+            <div class="prod-clas">
+                <a href="#">
+                    <img src="./public/img/cake.png" alt="蛋糕">
+                    <h3>蛋糕</h3>
+                </a>
+            </div>
+            <div class="prod-clas">
+                <a href="#">
+                    <img src="./public/img/bread.png" alt="麵包">
+                    <h3>麵包</h3>
+                </a>
+            </div>
+            <div class="prod-clas">
+                <a href="#">
+                    <img src="./public/img/gift.png" alt="禮盒">
+                    <h3>禮盒</h3>
+                </a>
+            </div>
+            <div class="prod-clas">
+                <a href="#">
+                    <img src="./public/img/snake.png" alt="點心">
+                    <h3>點心</h3>
+                </a>
+            </div>
         </div>
     </div>
 
 
     <!-- 精選商品 -->
     <h2 class="main-title">精選商品</h2>
-    <div class="container">
+    <div class="container" id="product">
         <div class="product">
             <div class="pic">
                 <div class="overflow-box">
@@ -182,11 +201,15 @@
                         <img src="./public/img/sele-prod1.jpeg" alt="藍莓塔">
                     </div>
                 </div>
-                <div class="cart">
-                    <img src="./public/img/product-cart.png" alt="加入購物車">
+                <div class="hover-icon cart">
+                    <div class="icon-box">
+                        <img src="./public/img/product-cart.png" alt="加入購物車">
+                    </div>
                 </div>
-                <div class="save">
-                    <img src="./public/img/product-cart.png" alt="收藏">
+                <div class="hover-icon save">
+                    <div class="icon-box">
+                        <img src="./public/img/product-cart.png" alt="收藏">
+                    </div>
                 </div>
             </div>
             <div class="name">藍莓塔</div>
@@ -199,11 +222,15 @@
                         <img src="./public/img/sele-prod2.jpeg" alt="薑餅蛋糕">
                     </div>
                 </div>
-                <div class="cart">
-                    <img src="./public/img/product-cart.png" alt="加入購物車">
+                <div class="hover-icon cart">
+                    <div class="icon-box">
+                        <img src="./public/img/product-cart.png" alt="加入購物車">
+                    </div>
                 </div>
-                <div class="save">
-                    <img src="./public/img/product-cart.png" alt="收藏">
+                <div class="hover-icon save">
+                    <div class="icon-box">
+                        <img src="./public/img/product-cart.png" alt="收藏">
+                    </div>
                 </div>
             </div>
             <div class="name">薑餅蛋糕</div>
@@ -216,11 +243,15 @@
                         <img src="./public/img/sele-prod3.jpeg" alt="蛋糕小總匯">
                     </div>
                 </div>
-                <div class="cart">
-                    <img src="./public/img/product-cart.png" alt="加入購物車">
+                <div class="hover-icon cart">
+                    <div class="icon-box">
+                        <img src="./public/img/product-cart.png" alt="加入購物車">
+                    </div>
                 </div>
-                <div class="save">
-                    <img src="./public/img/product-cart.png" alt="收藏">
+                <div class="hover-icon save">
+                    <div class="icon-box">
+                        <img src="./public/img/product-cart.png" alt="收藏">
+                    </div>
                 </div>
             </div>
             <div class="name">蛋糕小總匯</div>
@@ -233,11 +264,15 @@
                         <img src="./public/img/sele-prod4.jpeg" alt="布朗尼甜甜圈">
                     </div>
                 </div>
-                <div class="cart">
-                    <img src="./public/img/product-cart.png" alt="加入購物車">
+                <div class="hover-icon cart">
+                    <div class="icon-box">
+                        <img src="./public/img/product-cart.png" alt="加入購物車">
+                    </div>
                 </div>
-                <div class="save">
-                    <img src="./public/img/product-cart.png" alt="收藏">
+                <div class="hover-icon save">
+                    <div class="icon-box">
+                        <img src="./public/img/product-cart.png" alt="收藏">
+                    </div>
                 </div>
             </div>
             <div class="name">布朗尼甜甜圈</div>
@@ -325,29 +360,29 @@
 
 
     <h2 class="main-title">聯絡我們</h2>
-<div id="contact">
-    <div class="pic-box">
-        <img src="./public/img/contact.jpg" alt="聯絡我們">
+    <div id="contact">
+        <div class="pic-box">
+            <img src="./public/img/contact.jpg" alt="聯絡我們">
+        </div>
+        <form action="mailto:yl301114@gmail.com">
+            <label for="name">
+                <img src="./public/img/name.png" alt="姓名">
+            </label>
+            <input type="text" id="name" placeholder="姓名" required>
+
+            <label for="mail">
+                <img src="./public/img/mail.png" alt="信箱">
+            </label>
+            <input type="email" id="mail" placeholder="信箱" required>
+
+            <label for="phone">
+                <img src="./public/img/phone.png" alt="電話">
+            </label>
+            <input type="number" id="phone" placeholder="電話" required>
+
+            <button id="send">送出</button>
+        </form>
     </div>
-    <form action="mailto:yl301114@gmail.com">
-        <label for="name">
-            <img src="./public/img/name.png" alt="姓名">
-        </label>
-        <input type="text" id="name" placeholder="姓名" required>
-
-        <label for="mail">
-            <img src="./public/img/mail.png" alt="信箱">
-        </label>
-        <input type="email" id="mail" placeholder="信箱" required>
-
-        <label for="phone">
-            <img src="./public/img/phone.png" alt="電話">
-        </label>
-        <input type="number" id="phone" placeholder="電話" required>
-
-        <button id="send">送出</button>
-    </form>
-</div>
 
     <!-- footer -->
     <footer class="footer-box">
