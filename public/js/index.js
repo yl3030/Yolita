@@ -1,126 +1,63 @@
-// 下拉式選單
-// $(".main-menu").mouseenter(function(){
-// 	$(this).children(".sm-box").slideDown(200);
-// });
-// $(".main-menu").mouseleave(function(){
-// 	$(this).children(".sm-box").hide();
-// });
-
-// 漢堡鍵
-// $(".menu").click(function () {
-// 	if ($(this).hasClass("menu-active")) {
-// 		$(this).removeClass("menu-active");
-// 		$("#rwd-nav-title").animate({ right: "-110%" }, 300);
-// 	} else {
-// 		$(this).addClass("menu-active");
-// 		$("#rwd-nav-title").animate({ right: "0" }, 300);
-// 	}
-// });
-
-// rwd手風琴
-// $(".fold-box").click(function () {
-// 	if ($(this).children(".fold-icon").hasClass("active")) {
-// 		$(this).children(".fold-icon").removeClass("active");
-// 		$(this).closest(".card").children(".collapse").slideUp(300);
-// 		$(this).children(".rwd-title-name").css("font-weight", "normal");
-// 		if (!$(this).closest(".card").hasClass("nav-active")) {
-// 			$(this).children(".rwd-title-name").css("color", "#333333");
-// 			$(this)
-// 				.children(".fold-icon")
-// 				.children(".fi")
-// 				.css("background-color", "#333333");
-// 		}
-// 	} else {
-// 		$(this).children(".fold-icon").addClass("active");
-// 		$(this).closest(".card").children(".collapse").slideDown(300);
-// 		$(this).children(".rwd-title-name").css("font-weight", "900");
-// 		if (!$(this).closest(".card").hasClass("nav-active")) {
-// 			$(this).children(".rwd-title-name").css("color", "#ff6262");
-// 			$(this)
-// 				.children(".fold-icon")
-// 				.children(".fi")
-// 				.css("background-color", "#ff6262");
-// 		}
-// 	}
-// });
-
-// 搜尋鍵
-// $("#search").click(function () {
-// 	$(".search-form").slideToggle(300);
-// });
-
-// 購物車
-// $("#cart").click(function () {
-// 	$("#check-list").animate({ right: "0" }, 300);
-// });
-
-// $("#cart-leave").click(function () {
-// 	$("#check-list").animate({ right: "-100%" }, 300);
-// });
-
-// $(".d-check").click(function(){
-// 	$(this).parents(".check-product").slideUp(300);
-// })
-
-// 確認已加入購物車
-// $(".pb-btn").click(function(){
-// 	$(".buy-message").slideDown(300);
-// 	$("#bm-cross").click(function(){
-// 		$(this).parents(".buy-message").slideUp(300);
-// 	})
-// })
-
-// 收藏鍵
-// $(".save-btn").click(function () {
-// 	if($(this).children(".fa-heart").hasClass("far")){
-// 		$(this).children(".fa-heart").removeClass("far");
-// 		$(this).children(".fa-heart").addClass("fas");
-// 	}else if($(this).children(".fa-heart").hasClass("fas")){
-// 		$(this).children(".fa-heart").removeClass("fas");
-// 		$(this).children(".fa-heart").addClass("far");
-// 	};
-// });
-
-// $(".rwd-save-btn").click(function () {
-// 	var opa = $(this).children(".fas").css("opacity");
-// 	if (opa == 0) {
-// 		$(this).children(".fas").css("opacity", 1);
-// 		$(this).children(".far").css("opacity", 0);
-// 	} else if (opa == 1) {
-// 		$(this).children(".fas").css("opacity", 0);
-// 		$(this).children(".far").css("opacity", 1);
-// 	}
-// });
-
-// $("#prod-save").click(function () {
-// 	var opa = $(this).children(".fas").css("opacity");
-// 	if (opa == 0) {
-// 		$(this).children(".fas").css("opacity", 1);
-// 		$(this).children(".far").css("opacity", 0);
-// 	} else if (opa == 1) {
-// 		$(this).children(".fas").css("opacity", 0);
-// 		$(this).children(".far").css("opacity", 1);
-// 	}
-// });
-
+// swiper
+var hHeight = $("header").height();
+$("#banner").css("margin-top", hHeight);
+console.log("HH");
+$(window).on("resize scroll", function () {
+	$("#banner").css("margin-top", hHeight);
+	if ($(window).scrollTop() > hHeight) {
+		$("header")
+			.children(".main-bar")
+			.children("nav")
+			.css("left", "50%")
+			.css("transform", "translateX(-50%)");
+		$("header")
+			.children(".main-bar")
+			.children("nav")
+			.children("ul")
+			.css("text-align", "center");
+		$("header").children(".logo").slideUp(100);
+		$("header")
+			.children(".main-bar")
+			.children(".dd-logo")
+			.children("#dropdown-logo")
+			.show();
+	} else {
+		$("header")
+			.children(".main-bar")
+			.children("nav")
+			.css("left", "0")
+			.css("transform", "translateX(0)");
+		$("header")
+			.children(".main-bar")
+			.children("nav")
+			.children("ul")
+			.css("text-align", "left");
+		$("header").children(".logo").slideDown(100);
+		$("header")
+			.children(".main-bar")
+			.children(".dd-logo")
+			.children("#dropdown-logo")
+			.hide();
+	}
+});
 
 // 輪播圖
-var Rswiper = new Swiper('#banner', {
-	loop:true,
+var Rswiper = new Swiper("#banner", {
+	loop: true,
 	autoplay: {
 		delay: 3000,
 		disableOnInteraction: false,
 	},
 	pagination: {
-	  el: '#banner-pag',
-	  clickable: true,
+		el: "#banner-pag",
+		clickable: true,
 	},
 	navigation: {
 		nextEl: ".Snext", // 上一頁按鈕物件
 		prevEl: ".Sprev", // 下一頁按鈕物件
 	},
-  });
-  // 滑鼠滑入後停止輪播
+});
+// 滑鼠滑入後停止輪播
 $("#banner").mouseenter(function () {
 	Rswiper.autoplay.stop();
 });
@@ -128,3 +65,115 @@ $("#banner").mouseleave(function () {
 	Rswiper.autoplay.start();
 });
 
+// 選規格
+$(".spec")
+	.children("ul")
+	.children("li")
+	.click(function () {
+		$(".spec").children("ul").children("li").removeClass("active");
+		$(this).addClass("active");
+	});
+
+// 加入購物車
+$(".add").click(function () {
+	if (
+		$(this)
+			.parents(".text-box")
+			.children(".spec")
+			.children("ul")
+			.children("li")
+			.hasClass("active")
+	) {
+		$(this).parents(".add-modal").modal("hide");
+		$(".modal-backdrop").hide();
+		$(this)
+			.parents(".text-box")
+			.children(".spec")
+			.children("ul")
+			.children("li")
+			.removeClass("active");
+		$(".alert-success").children("p").empty();
+		$(".alert-success").children("p").append("已加入購物車");
+		$(".alert-success").fadeIn(300);
+		$(".alert-success").delay(1500).fadeOut(300);
+	} else {
+		$(".alert-error").children("p").empty();
+		$(".alert-error").children("p").append("您未選擇規格");
+		$(".alert-error").fadeIn(300);
+		$(".alert-error").delay(1500).fadeOut(300);
+	}
+});
+
+// 收藏商品
+$(".save").click(function () {
+	if ($(this).hasClass("saved")) {
+		$(this).removeClass("saved");
+		$(".alert-success").children("p").empty();
+		$(".alert-success").children("p").append("已取消收藏商品");
+		$(".alert-success").fadeIn(300);
+		$(".alert-success").delay(1500).fadeOut(300);
+	} else {
+		$(this).addClass("saved");
+		$(".alert-success").children("p").empty();
+		$(".alert-success").children("p").append("已收藏商品");
+		$(".alert-success").fadeIn(300);
+		$(".alert-success").delay(1500).fadeOut(300);
+	}
+});
+
+// menu
+$(".mb-header")
+	.children(".header-box")
+	.children(".menu")
+	.click(function () {
+		$(this).parents(".mb-header").children(".menu-box").slideToggle(100);
+	});
+
+if ($(window).width() > 1024) {
+	var storyHeight = $("#story").children(".bg-color").children("img").height();
+	var stHeight = $("#story").children(".container").children(".text").height();
+	var stMT = (storyHeight - stHeight) / 2;
+	$("#story").children(".container").css("height", storyHeight);
+	$("#story").children(".container").children(".text").css("padding-top", stMT);
+	var contactHeight = $("#contact").children(".pic-box").width() * 0.6;
+	var cfHeight = $("#contact").children(".container").children("form").height();
+	var cfMT = (contactHeight - cfHeight) / 2;
+	$("#contact").css("height", contactHeight);
+	$("#contact").children(".container").children("form").css("margin-top", cfMT);
+}else{
+	var fH = $("#contact").children(".container").children("form").height();
+	$("#contact").children(".container").css("height",fH);
+}
+
+$(window).on("resize scroll", function () {
+	if ($(window).width() > 1024) {
+		var storyHeight = $("#story")
+			.children(".bg-color")
+			.children("img")
+			.height();
+		var stHeight = $("#story")
+			.children(".container")
+			.children(".text")
+			.height();
+		var stMT = (storyHeight - stHeight) / 2;
+		$("#story").children(".container").css("height", storyHeight);
+		$("#story")
+			.children(".container")
+			.children(".text")
+			.css("padding-top", stMT);
+		var contactHeight = $("#contact").children(".pic-box").width() * 0.6;
+		var cfHeight = $("#contact")
+			.children(".container")
+			.children("form")
+			.height();
+		var cfMT = (contactHeight - cfHeight) / 2;
+		$("#contact").css("height", contactHeight);
+		$("#contact")
+			.children(".container")
+			.children("form")
+			.css("margin-top", cfMT);
+	}else{
+		var fH = $("#contact").children(".container").children("form").height();
+		$("#contact").children(".container").css("height",fH);
+	}
+});

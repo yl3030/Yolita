@@ -5,9 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 
     <!-- awesomefont CDN -->
     <script src="https://kit.fontawesome.com/69fd600045.js" crossorigin="anonymous"></script>
@@ -23,11 +26,14 @@
 </head>
 
 <body>
-    <header>
+    <header class="lg-header">
         <div class="logo">
             <img src="./public/img/logo.png" alt="logo">
         </div>
         <div class="main-bar container">
+            <div class="dd-logo">
+                <img src="./public/img/logo.png" alt="logo" id="dropdown-logo">
+            </div>
             <nav>
                 <ul>
                     <li><a href="#">商品專區</a>
@@ -48,9 +54,150 @@
                 </ul>
             </nav>
             <div class="icon">
-                <a href="#"><img src="./public/img/cart.png" alt="購物車"></a>
-                <a href="#"><img src="./public/img/search.png" alt="搜尋"></a>
-                <a href="#"><img src="./public/img/user.png" alt="會員專區"></a>
+                <a href="#">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.25 50">
+                        <defs>
+                            <style>
+                                .cart-color {
+                                    fill: #4d4d4d;
+                                }
+                            </style>
+                        </defs>
+                        <title>cart</title>
+                        <path class="cart-color svg-color" d="M41.28,44l-.2.18h0Z" transform="translate(-3.37)" />
+                        <path class="cart-color svg-color"
+                            d="M43.65,9.4H35.93V7.56A7.56,7.56,0,0,0,28.37,0H21.63a7.56,7.56,0,0,0-7.56,7.56V9.4H6.35a3,3,0,0,0-3,3v25.3A12.33,12.33,0,0,0,15.7,50H34.3A12.33,12.33,0,0,0,46.63,37.68V12.38A3,3,0,0,0,43.65,9.4ZM16.57,7.56A5.07,5.07,0,0,1,21.63,2.5h6.74a5.07,5.07,0,0,1,5.06,5.06V9.45H16.57V7.56ZM44.13,37.68A9.84,9.84,0,0,1,34.3,47.5H15.7a9.84,9.84,0,0,1-9.83-9.82V12.38a.48.48,0,0,1,.48-.48h37.3a.48.48,0,0,1,.48.48Z"
+                            transform="translate(-3.37)" />
+                    </svg>
+                    <div class="add-num">0</div>
+                </a>
+                <a href="#">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                        <defs>
+                            <style>
+                                .search-color {
+                                    fill: #4d4d4d;
+                                }
+                            </style>
+                        </defs>
+                        <title>search</title>
+                        <path class="search-color svg-color" d="M41.28,44l-.2.18h0Z" />
+                        <path class="search-color svg-color"
+                            d="M49.13,44.92,36.27,32.06a20.1,20.1,0,1,0-4.21,4.21L44.92,49.13a3,3,0,0,0,4.21-4.21ZM31.84,33.23a16.86,16.86,0,0,1-1.57,1.25A17.6,17.6,0,0,1,7.66,32.55a17.59,17.59,0,0,1,0-24.89,17.59,17.59,0,0,1,24.89,0,17.6,17.6,0,0,1,1.93,22.61,16.86,16.86,0,0,1-1.25,1.57c-.22.24-.45.48-.68.71ZM47.71,47.71a1,1,0,0,1-1.38,0L33.61,35A18.23,18.23,0,0,0,35,33.61L47.71,46.33a1,1,0,0,1,0,1.38Z" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                        <defs>
+                            <style>
+                                .user-color {
+                                    fill: #4d4d4d;
+                                }
+                            </style>
+                        </defs>
+                        <title>user</title>
+                        <path class="user-color svg-color"
+                            d="M42.68,7.32A25,25,0,0,0,3.94,38.48c.29.45.59.89.9,1.3.08.12.17.23.26.35.27.36.56.72.85,1.06s.36.41.54.61.16.17.23.26l.37.38c.09.1.19.19.29.29l.55.54.73.65.06,0,.2.18c.47.38.95.76,1.44,1.12a25,25,0,0,0,29.28,0c.49-.36,1-.74,1.44-1.12l.2-.18.06,0,.73-.65.55-.54c.1-.1.2-.19.29-.29h0l.36-.37c.07-.09.15-.17.23-.26s.37-.4.54-.61.58-.7.85-1.06l.27-.35c.3-.41.6-.85.89-1.3A25,25,0,0,0,42.68,7.32Zm-4,35.59a22.77,22.77,0,0,1-4.9,2.84,22.61,22.61,0,0,1-17.54,0,22.77,22.77,0,0,1-4.9-2.84q-.74-.57-1.44-1.2a14.53,14.53,0,0,1,5.87-6.41,18.33,18.33,0,0,1,18.48,0,14.53,14.53,0,0,1,5.87,6.41Q39.41,42.34,38.67,42.91Zm7.08-9.14a21.86,21.86,0,0,1-1.5,2.93l-.16.27c-.35.55-.72,1.09-1.12,1.61l-.26.34-.17.21c-.19.24-.38.47-.58.69v0c-3.07-5.79-9.68-9.51-17-9.51S11.12,34.05,8.06,39.84l0,0c-.2-.22-.39-.45-.59-.69l-.16-.21L7,38.58Q6.44,37.8,5.91,37l-.16-.26a21.86,21.86,0,0,1-1.5-2.93,22.52,22.52,0,0,1,12-29.52,22.52,22.52,0,0,1,29.52,12,22.61,22.61,0,0,1,0,17.54Z" />
+                        <path class="user-color svg-color"
+                            d="M25,28.34a9.78,9.78,0,1,1,9.78-9.77A9.79,9.79,0,0,1,25,28.34Zm0-17.08a7.31,7.31,0,1,0,7.3,7.31A7.31,7.31,0,0,0,25,11.26Z" />
+                        <path class="user-color svg-color" d="M8.92,44.15h0L8.72,44Z" />
+                        <path class="user-color svg-color" d="M41.28,44l-.2.18h0Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <header class="mb-header">
+        <div class="container header-box">
+            <div class="menu">
+                <img src="./public/img/menu.png" alt="menu">
+            </div>
+            <div class="logo">
+                <img src="./public/img/logo.png" alt="logo">
+            </div>
+            <div class="icon">
+                <a href="#">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                        <defs>
+                            <style>
+                                .search-color {
+                                    fill: #4d4d4d;
+                                }
+                            </style>
+                        </defs>
+                        <title>search</title>
+                        <path class="search-color svg-color" d="M41.28,44l-.2.18h0Z" />
+                        <path class="search-color svg-color"
+                            d="M49.13,44.92,36.27,32.06a20.1,20.1,0,1,0-4.21,4.21L44.92,49.13a3,3,0,0,0,4.21-4.21ZM31.84,33.23a16.86,16.86,0,0,1-1.57,1.25A17.6,17.6,0,0,1,7.66,32.55a17.59,17.59,0,0,1,0-24.89,17.59,17.59,0,0,1,24.89,0,17.6,17.6,0,0,1,1.93,22.61,16.86,16.86,0,0,1-1.25,1.57c-.22.24-.45.48-.68.71ZM47.71,47.71a1,1,0,0,1-1.38,0L33.61,35A18.23,18.23,0,0,0,35,33.61L47.71,46.33a1,1,0,0,1,0,1.38Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="menu-box">
+            <nav class="container">
+                <ul>
+                    <li><a href="#">商品專區</a>
+                        <div class="hover-bar"></div>
+                    </li>
+                    <li><a>品牌故事</a>
+                        <div class="hover-bar"></div>
+                    </li>
+                    <li><a>最新消息</a>
+                        <div class="hover-bar"></div>
+                    </li>
+                    <li><a>門市據點</a>
+                        <div class="hover-bar"></div>
+                    </li>
+                    <li><a>聯絡我們</a>
+                        <div class="hover-bar"></div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="icon-box">
+                <div class="container">
+                    <div class="i-box">
+                        <a href="#">
+                            <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                <defs>
+                                    <style>
+                                        .user-color {
+                                            fill: #4d4d4d;
+                                        }
+                                    </style>
+                                </defs>
+                                <title>user</title>
+                                <path class="user-color svg-color"
+                                    d="M42.68,7.32A25,25,0,0,0,3.94,38.48c.29.45.59.89.9,1.3.08.12.17.23.26.35.27.36.56.72.85,1.06s.36.41.54.61.16.17.23.26l.37.38c.09.1.19.19.29.29l.55.54.73.65.06,0,.2.18c.47.38.95.76,1.44,1.12a25,25,0,0,0,29.28,0c.49-.36,1-.74,1.44-1.12l.2-.18.06,0,.73-.65.55-.54c.1-.1.2-.19.29-.29h0l.36-.37c.07-.09.15-.17.23-.26s.37-.4.54-.61.58-.7.85-1.06l.27-.35c.3-.41.6-.85.89-1.3A25,25,0,0,0,42.68,7.32Zm-4,35.59a22.77,22.77,0,0,1-4.9,2.84,22.61,22.61,0,0,1-17.54,0,22.77,22.77,0,0,1-4.9-2.84q-.74-.57-1.44-1.2a14.53,14.53,0,0,1,5.87-6.41,18.33,18.33,0,0,1,18.48,0,14.53,14.53,0,0,1,5.87,6.41Q39.41,42.34,38.67,42.91Zm7.08-9.14a21.86,21.86,0,0,1-1.5,2.93l-.16.27c-.35.55-.72,1.09-1.12,1.61l-.26.34-.17.21c-.19.24-.38.47-.58.69v0c-3.07-5.79-9.68-9.51-17-9.51S11.12,34.05,8.06,39.84l0,0c-.2-.22-.39-.45-.59-.69l-.16-.21L7,38.58Q6.44,37.8,5.91,37l-.16-.26a21.86,21.86,0,0,1-1.5-2.93,22.52,22.52,0,0,1,12-29.52,22.52,22.52,0,0,1,29.52,12,22.61,22.61,0,0,1,0,17.54Z" />
+                                <path class="user-color svg-color"
+                                    d="M25,28.34a9.78,9.78,0,1,1,9.78-9.77A9.79,9.79,0,0,1,25,28.34Zm0-17.08a7.31,7.31,0,1,0,7.3,7.31A7.31,7.31,0,0,0,25,11.26Z" />
+                                <path class="user-color svg-color" d="M8.92,44.15h0L8.72,44Z" />
+                                <path class="user-color svg-color" d="M41.28,44l-.2.18h0Z" />
+                            </svg>
+                            <span>登入</span>
+                        </a>
+                    </div>
+                    <div class="i-box">
+                        <a href="#">
+                            <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.25 50">
+                                <defs>
+                                    <style>
+                                        .cart-color {
+                                            fill: #4d4d4d;
+                                        }
+                                    </style>
+                                </defs>
+                                <title>cart</title>
+                                <path class="cart-color svg-color" d="M41.28,44l-.2.18h0Z"
+                                    transform="translate(-3.37)" />
+                                <path class="cart-color svg-color"
+                                    d="M43.65,9.4H35.93V7.56A7.56,7.56,0,0,0,28.37,0H21.63a7.56,7.56,0,0,0-7.56,7.56V9.4H6.35a3,3,0,0,0-3,3v25.3A12.33,12.33,0,0,0,15.7,50H34.3A12.33,12.33,0,0,0,46.63,37.68V12.38A3,3,0,0,0,43.65,9.4ZM16.57,7.56A5.07,5.07,0,0,1,21.63,2.5h6.74a5.07,5.07,0,0,1,5.06,5.06V9.45H16.57V7.56ZM44.13,37.68A9.84,9.84,0,0,1,34.3,47.5H15.7a9.84,9.84,0,0,1-9.83-9.82V12.38a.48.48,0,0,1,.48-.48h37.3a.48.48,0,0,1,.48.48Z"
+                                    transform="translate(-3.37)" />
+                            </svg>
+                            <span>購物車</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -161,7 +308,7 @@
 
 
     <!-- 商品分類 -->
-    <div class="container" style="z-index: 3000;">
+    <div class="container" style="z-index: 1;position: sticky;">
         <div id="prod-clas">
             <div class="prod-clas">
                 <a href="#">
@@ -190,93 +337,342 @@
         </div>
     </div>
 
+    <div class="alert-box alert-success">
+        <div class="line"></div>
+        <div class="i-box">
+            <i class="fas fa-check"></i>
+        </div>
+        <p></p>
+    </div>
+    <div class="alert-box alert-error">
+        <div class="line"></div>
+        <div class="i-box">
+            <i class="fas fa-exclamation"></i>
+        </div>
+        <p></p>
+    </div>
+
 
     <!-- 精選商品 -->
     <h2 class="main-title">精選商品</h2>
     <div class="container" id="product">
-        <div class="product">
+        <div class="product mt-sm-0">
             <div class="pic">
                 <div class="overflow-box">
                     <div class="pic-box" style="background-image:url(./public/img/sele-prod1.jpeg)">
                         <img src="./public/img/sele-prod1.jpeg" alt="藍莓塔">
                     </div>
                 </div>
-                <div class="hover-icon cart">
-                    <div class="icon-box">
-                        <img src="./public/img/product-cart.png" alt="加入購物車">
-                    </div>
-                </div>
-                <div class="hover-icon save">
-                    <div class="icon-box">
-                        <img src="./public/img/product-cart.png" alt="收藏">
-                    </div>
-                </div>
+                <div class="hover-box"></div>
+                <button class="icon-box cart" data-bs-toggle="modal" data-bs-target="#add1">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.25 50">
+                        <defs>
+                            <style>
+                                .addtocart-color.svg-color {
+                                    fill: #ea6060;
+                                }
+                            </style>
+                        </defs>
+                        <title>addtocart</title>
+                        <path class="addtocart-color svg-color" d="M41.28,44l-.2.18h0Z" transform="translate(-3.37)" />
+                        <path class="addtocart-color svg-color"
+                            d="M43.65,9.4H35.93V7.56A7.56,7.56,0,0,0,28.37,0H21.63a7.56,7.56,0,0,0-7.56,7.56V9.4H6.35a3,3,0,0,0-3,3v25.3A12.33,12.33,0,0,0,15.7,50H34.3A12.33,12.33,0,0,0,46.63,37.68V12.38A3,3,0,0,0,43.65,9.4ZM16.57,7.56A5.07,5.07,0,0,1,21.63,2.5h6.74a5.07,5.07,0,0,1,5.06,5.06V9.45H16.57V7.56ZM44.13,37.68A9.84,9.84,0,0,1,34.3,47.5H15.7a9.84,9.84,0,0,1-9.83-9.82V12.38a.48.48,0,0,1,.48-.48h37.3a.48.48,0,0,1,.48.48Z"
+                            transform="translate(-3.37)" />
+                    </svg>
+                </button>
+                <button class="icon-box save">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 44.42">
+                        <defs>
+                            <style>
+                                .save-color1.svg-color {
+                                    fill: #ea6060;
+                                }
+
+                                .save-color2.svg-color {
+                                    fill: none;
+                                }
+                            </style>
+                        </defs>
+                        <title>save</title>
+                        <path class="save-color1 svg-color"
+                            d="M46.06,7.1a13.31,13.31,0,0,0-9.9-4.31,12.45,12.45,0,0,0-7.78,2.68,16.15,16.15,0,0,0-3.15,3.3.28.28,0,0,1-.23.11.29.29,0,0,1-.22-.11,16.2,16.2,0,0,0-3.16-3.3,12.45,12.45,0,0,0-7.78-2.68A13.31,13.31,0,0,0,3.94,7.1,15.54,15.54,0,0,0,0,17.71c0,4.2,1.57,8.06,5,12.14C8,33.54,12.39,37.27,17.47,41.59l.1.09c1.71,1.46,3.65,3.11,5.66,4.87a2.7,2.7,0,0,0,3.54,0c2.08-1.82,4.12-3.56,5.76-5l.13-.11c5-4.29,9.37-8,12.39-11.63,3.38-4.08,5-7.94,5-12.14A15.54,15.54,0,0,0,46.06,7.1ZM43.19,28.31C40.29,31.8,36,35.45,31.05,39.68l-.31.27c-1.68,1.43-3.59,3.06-5.56,4.78l-.08.07h-.21l-.07-.07c-2.05-1.79-4-3.47-5.76-4.95l0,0c-5-4.24-9.29-7.9-12.23-11.45a20.73,20.73,0,0,1-3.36-5.4,13.29,13.29,0,0,1-1-5.2,13.2,13.2,0,0,1,3.29-9A11,11,0,0,1,13.84,5.2a10.13,10.13,0,0,1,6.3,2.18,13.94,13.94,0,0,1,2.68,2.8L24,11.79a1.26,1.26,0,0,0,2,0l1.16-1.6a13.47,13.47,0,0,1,2.68-2.81,10.13,10.13,0,0,1,6.3-2.18,10.93,10.93,0,0,1,8.13,3.54,13.11,13.11,0,0,1,3.3,9,13.47,13.47,0,0,1-1,5.2A21,21,0,0,1,43.19,28.31Z"
+                            transform="translate(0 -2.79)" />
+                        <path class="save-color2 svg-color"
+                            d="M50,17.71c0,4.2-1.57,8.06-5,12.14-3,3.64-7.36,7.34-12.39,11.63l-.13.11c-1.64,1.4-3.68,3.14-5.76,5a2.7,2.7,0,0,1-3.54,0c-2-1.76-3.95-3.41-5.66-4.87l-.1-.09C12.39,37.27,8,33.54,5,29.85,1.57,25.77,0,21.91,0,17.71A15.54,15.54,0,0,1,3.94,7.1a13.31,13.31,0,0,1,9.9-4.31,12.45,12.45,0,0,1,7.78,2.68,16.2,16.2,0,0,1,3.16,3.3.29.29,0,0,0,.22.11.28.28,0,0,0,.23-.11,16.15,16.15,0,0,1,3.15-3.3,12.45,12.45,0,0,1,7.78-2.68,13.31,13.31,0,0,1,9.9,4.31A15.54,15.54,0,0,1,50,17.71Z"
+                            transform="translate(0 -2.79)" />
+                    </svg>
+                </button>
             </div>
             <div class="name">藍莓塔</div>
             <div class="price">NT$450</div>
         </div>
-        <div class="product">
+
+        <div class="product mt-sm-0">
             <div class="pic">
                 <div class="overflow-box">
                     <div class="pic-box" style="background-image:url(./public/img/sele-prod2.jpeg)">
-                        <img src="./public/img/sele-prod2.jpeg" alt="薑餅蛋糕">
+                        <img src="./public/img/sele-prod2.jpeg" alt="藍莓塔">
                     </div>
                 </div>
-                <div class="hover-icon cart">
-                    <div class="icon-box">
-                        <img src="./public/img/product-cart.png" alt="加入購物車">
-                    </div>
-                </div>
-                <div class="hover-icon save">
-                    <div class="icon-box">
-                        <img src="./public/img/product-cart.png" alt="收藏">
-                    </div>
-                </div>
+                <div class="hover-box"></div>
+                <button class="icon-box cart" data-bs-toggle="modal" data-bs-target="#add2">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.25 50">
+                        <defs>
+                            <style>
+                                .addtocart-color.svg-color {
+                                    fill: #ea6060;
+                                }
+                            </style>
+                        </defs>
+                        <title>addtocart</title>
+                        <path class="addtocart-color svg-color" d="M41.28,44l-.2.18h0Z" transform="translate(-3.37)" />
+                        <path class="addtocart-color svg-color"
+                            d="M43.65,9.4H35.93V7.56A7.56,7.56,0,0,0,28.37,0H21.63a7.56,7.56,0,0,0-7.56,7.56V9.4H6.35a3,3,0,0,0-3,3v25.3A12.33,12.33,0,0,0,15.7,50H34.3A12.33,12.33,0,0,0,46.63,37.68V12.38A3,3,0,0,0,43.65,9.4ZM16.57,7.56A5.07,5.07,0,0,1,21.63,2.5h6.74a5.07,5.07,0,0,1,5.06,5.06V9.45H16.57V7.56ZM44.13,37.68A9.84,9.84,0,0,1,34.3,47.5H15.7a9.84,9.84,0,0,1-9.83-9.82V12.38a.48.48,0,0,1,.48-.48h37.3a.48.48,0,0,1,.48.48Z"
+                            transform="translate(-3.37)" />
+                    </svg>
+                </button>
+                <button class="icon-box save">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 44.42">
+                        <defs>
+                            <style>
+                                .save-color1.svg-color {
+                                    fill: #ea6060;
+                                }
+
+                                .save-color2.svg-color {
+                                    fill: none;
+                                }
+                            </style>
+                        </defs>
+                        <title>save</title>
+                        <path class="save-color1 svg-color"
+                            d="M46.06,7.1a13.31,13.31,0,0,0-9.9-4.31,12.45,12.45,0,0,0-7.78,2.68,16.15,16.15,0,0,0-3.15,3.3.28.28,0,0,1-.23.11.29.29,0,0,1-.22-.11,16.2,16.2,0,0,0-3.16-3.3,12.45,12.45,0,0,0-7.78-2.68A13.31,13.31,0,0,0,3.94,7.1,15.54,15.54,0,0,0,0,17.71c0,4.2,1.57,8.06,5,12.14C8,33.54,12.39,37.27,17.47,41.59l.1.09c1.71,1.46,3.65,3.11,5.66,4.87a2.7,2.7,0,0,0,3.54,0c2.08-1.82,4.12-3.56,5.76-5l.13-.11c5-4.29,9.37-8,12.39-11.63,3.38-4.08,5-7.94,5-12.14A15.54,15.54,0,0,0,46.06,7.1ZM43.19,28.31C40.29,31.8,36,35.45,31.05,39.68l-.31.27c-1.68,1.43-3.59,3.06-5.56,4.78l-.08.07h-.21l-.07-.07c-2.05-1.79-4-3.47-5.76-4.95l0,0c-5-4.24-9.29-7.9-12.23-11.45a20.73,20.73,0,0,1-3.36-5.4,13.29,13.29,0,0,1-1-5.2,13.2,13.2,0,0,1,3.29-9A11,11,0,0,1,13.84,5.2a10.13,10.13,0,0,1,6.3,2.18,13.94,13.94,0,0,1,2.68,2.8L24,11.79a1.26,1.26,0,0,0,2,0l1.16-1.6a13.47,13.47,0,0,1,2.68-2.81,10.13,10.13,0,0,1,6.3-2.18,10.93,10.93,0,0,1,8.13,3.54,13.11,13.11,0,0,1,3.3,9,13.47,13.47,0,0,1-1,5.2A21,21,0,0,1,43.19,28.31Z"
+                            transform="translate(0 -2.79)" />
+                        <path class="save-color2 svg-color"
+                            d="M50,17.71c0,4.2-1.57,8.06-5,12.14-3,3.64-7.36,7.34-12.39,11.63l-.13.11c-1.64,1.4-3.68,3.14-5.76,5a2.7,2.7,0,0,1-3.54,0c-2-1.76-3.95-3.41-5.66-4.87l-.1-.09C12.39,37.27,8,33.54,5,29.85,1.57,25.77,0,21.91,0,17.71A15.54,15.54,0,0,1,3.94,7.1a13.31,13.31,0,0,1,9.9-4.31,12.45,12.45,0,0,1,7.78,2.68,16.2,16.2,0,0,1,3.16,3.3.29.29,0,0,0,.22.11.28.28,0,0,0,.23-.11,16.15,16.15,0,0,1,3.15-3.3,12.45,12.45,0,0,1,7.78-2.68,13.31,13.31,0,0,1,9.9,4.31A15.54,15.54,0,0,1,50,17.71Z"
+                            transform="translate(0 -2.79)" />
+                    </svg>
+                </button>
             </div>
             <div class="name">薑餅蛋糕</div>
             <div class="price">NT$480</div>
         </div>
-        <div class="product">
+
+        <div class="product mt-lg-0 mt-md-0 mt-sm-2">
             <div class="pic">
                 <div class="overflow-box">
                     <div class="pic-box" style="background-image:url(./public/img/sele-prod3.jpeg)">
-                        <img src="./public/img/sele-prod3.jpeg" alt="蛋糕小總匯">
+                        <img src="./public/img/sele-prod3.jpeg" alt="藍莓塔">
                     </div>
                 </div>
-                <div class="hover-icon cart">
-                    <div class="icon-box">
-                        <img src="./public/img/product-cart.png" alt="加入購物車">
-                    </div>
-                </div>
-                <div class="hover-icon save">
-                    <div class="icon-box">
-                        <img src="./public/img/product-cart.png" alt="收藏">
-                    </div>
-                </div>
+                <div class="hover-box"></div>
+                <button class="icon-box cart" data-bs-toggle="modal" data-bs-target="#add3">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.25 50">
+                        <defs>
+                            <style>
+                                .addtocart-color.svg-color {
+                                    fill: #ea6060;
+                                }
+                            </style>
+                        </defs>
+                        <title>addtocart</title>
+                        <path class="addtocart-color svg-color" d="M41.28,44l-.2.18h0Z" transform="translate(-3.37)" />
+                        <path class="addtocart-color svg-color"
+                            d="M43.65,9.4H35.93V7.56A7.56,7.56,0,0,0,28.37,0H21.63a7.56,7.56,0,0,0-7.56,7.56V9.4H6.35a3,3,0,0,0-3,3v25.3A12.33,12.33,0,0,0,15.7,50H34.3A12.33,12.33,0,0,0,46.63,37.68V12.38A3,3,0,0,0,43.65,9.4ZM16.57,7.56A5.07,5.07,0,0,1,21.63,2.5h6.74a5.07,5.07,0,0,1,5.06,5.06V9.45H16.57V7.56ZM44.13,37.68A9.84,9.84,0,0,1,34.3,47.5H15.7a9.84,9.84,0,0,1-9.83-9.82V12.38a.48.48,0,0,1,.48-.48h37.3a.48.48,0,0,1,.48.48Z"
+                            transform="translate(-3.37)" />
+                    </svg>
+                </button>
+                <button class="icon-box save">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 44.42">
+                        <defs>
+                            <style>
+                                .save-color1.svg-color {
+                                    fill: #ea6060;
+                                }
+
+                                .save-color2.svg-color {
+                                    fill: none;
+                                }
+                            </style>
+                        </defs>
+                        <title>save</title>
+                        <path class="save-color1 svg-color"
+                            d="M46.06,7.1a13.31,13.31,0,0,0-9.9-4.31,12.45,12.45,0,0,0-7.78,2.68,16.15,16.15,0,0,0-3.15,3.3.28.28,0,0,1-.23.11.29.29,0,0,1-.22-.11,16.2,16.2,0,0,0-3.16-3.3,12.45,12.45,0,0,0-7.78-2.68A13.31,13.31,0,0,0,3.94,7.1,15.54,15.54,0,0,0,0,17.71c0,4.2,1.57,8.06,5,12.14C8,33.54,12.39,37.27,17.47,41.59l.1.09c1.71,1.46,3.65,3.11,5.66,4.87a2.7,2.7,0,0,0,3.54,0c2.08-1.82,4.12-3.56,5.76-5l.13-.11c5-4.29,9.37-8,12.39-11.63,3.38-4.08,5-7.94,5-12.14A15.54,15.54,0,0,0,46.06,7.1ZM43.19,28.31C40.29,31.8,36,35.45,31.05,39.68l-.31.27c-1.68,1.43-3.59,3.06-5.56,4.78l-.08.07h-.21l-.07-.07c-2.05-1.79-4-3.47-5.76-4.95l0,0c-5-4.24-9.29-7.9-12.23-11.45a20.73,20.73,0,0,1-3.36-5.4,13.29,13.29,0,0,1-1-5.2,13.2,13.2,0,0,1,3.29-9A11,11,0,0,1,13.84,5.2a10.13,10.13,0,0,1,6.3,2.18,13.94,13.94,0,0,1,2.68,2.8L24,11.79a1.26,1.26,0,0,0,2,0l1.16-1.6a13.47,13.47,0,0,1,2.68-2.81,10.13,10.13,0,0,1,6.3-2.18,10.93,10.93,0,0,1,8.13,3.54,13.11,13.11,0,0,1,3.3,9,13.47,13.47,0,0,1-1,5.2A21,21,0,0,1,43.19,28.31Z"
+                            transform="translate(0 -2.79)" />
+                        <path class="save-color2 svg-color"
+                            d="M50,17.71c0,4.2-1.57,8.06-5,12.14-3,3.64-7.36,7.34-12.39,11.63l-.13.11c-1.64,1.4-3.68,3.14-5.76,5a2.7,2.7,0,0,1-3.54,0c-2-1.76-3.95-3.41-5.66-4.87l-.1-.09C12.39,37.27,8,33.54,5,29.85,1.57,25.77,0,21.91,0,17.71A15.54,15.54,0,0,1,3.94,7.1a13.31,13.31,0,0,1,9.9-4.31,12.45,12.45,0,0,1,7.78,2.68,16.2,16.2,0,0,1,3.16,3.3.29.29,0,0,0,.22.11.28.28,0,0,0,.23-.11,16.15,16.15,0,0,1,3.15-3.3,12.45,12.45,0,0,1,7.78-2.68,13.31,13.31,0,0,1,9.9,4.31A15.54,15.54,0,0,1,50,17.71Z"
+                            transform="translate(0 -2.79)" />
+                    </svg>
+                </button>
             </div>
             <div class="name">蛋糕小總匯</div>
             <div class="price">NT$140</div>
         </div>
-        <div class="product">
+
+        <div class="product mt-lg-0 mt-md-0 mt-sm-2">
             <div class="pic">
                 <div class="overflow-box">
                     <div class="pic-box" style="background-image:url(./public/img/sele-prod4.jpeg)">
-                        <img src="./public/img/sele-prod4.jpeg" alt="布朗尼甜甜圈">
+                        <img src="./public/img/sele-prod4.jpeg" alt="藍莓塔">
                     </div>
                 </div>
-                <div class="hover-icon cart">
-                    <div class="icon-box">
-                        <img src="./public/img/product-cart.png" alt="加入購物車">
-                    </div>
-                </div>
-                <div class="hover-icon save">
-                    <div class="icon-box">
-                        <img src="./public/img/product-cart.png" alt="收藏">
-                    </div>
-                </div>
+                <div class="hover-box"></div>
+                <button class="icon-box cart" data-bs-toggle="modal" data-bs-target="#add4">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.25 50">
+                        <defs>
+                            <style>
+                                .addtocart-color.svg-color {
+                                    fill: #ea6060;
+                                }
+                            </style>
+                        </defs>
+                        <title>addtocart</title>
+                        <path class="addtocart-color svg-color" d="M41.28,44l-.2.18h0Z" transform="translate(-3.37)" />
+                        <path class="addtocart-color svg-color"
+                            d="M43.65,9.4H35.93V7.56A7.56,7.56,0,0,0,28.37,0H21.63a7.56,7.56,0,0,0-7.56,7.56V9.4H6.35a3,3,0,0,0-3,3v25.3A12.33,12.33,0,0,0,15.7,50H34.3A12.33,12.33,0,0,0,46.63,37.68V12.38A3,3,0,0,0,43.65,9.4ZM16.57,7.56A5.07,5.07,0,0,1,21.63,2.5h6.74a5.07,5.07,0,0,1,5.06,5.06V9.45H16.57V7.56ZM44.13,37.68A9.84,9.84,0,0,1,34.3,47.5H15.7a9.84,9.84,0,0,1-9.83-9.82V12.38a.48.48,0,0,1,.48-.48h37.3a.48.48,0,0,1,.48.48Z"
+                            transform="translate(-3.37)" />
+                    </svg>
+                </button>
+                <button class="icon-box save">
+                    <svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 44.42">
+                        <defs>
+                            <style>
+                                .save-color1.svg-color {
+                                    fill: #ea6060;
+                                }
+
+                                .save-color2.svg-color {
+                                    fill: none;
+                                }
+                            </style>
+                        </defs>
+                        <title>save</title>
+                        <path class="save-color1 svg-color"
+                            d="M46.06,7.1a13.31,13.31,0,0,0-9.9-4.31,12.45,12.45,0,0,0-7.78,2.68,16.15,16.15,0,0,0-3.15,3.3.28.28,0,0,1-.23.11.29.29,0,0,1-.22-.11,16.2,16.2,0,0,0-3.16-3.3,12.45,12.45,0,0,0-7.78-2.68A13.31,13.31,0,0,0,3.94,7.1,15.54,15.54,0,0,0,0,17.71c0,4.2,1.57,8.06,5,12.14C8,33.54,12.39,37.27,17.47,41.59l.1.09c1.71,1.46,3.65,3.11,5.66,4.87a2.7,2.7,0,0,0,3.54,0c2.08-1.82,4.12-3.56,5.76-5l.13-.11c5-4.29,9.37-8,12.39-11.63,3.38-4.08,5-7.94,5-12.14A15.54,15.54,0,0,0,46.06,7.1ZM43.19,28.31C40.29,31.8,36,35.45,31.05,39.68l-.31.27c-1.68,1.43-3.59,3.06-5.56,4.78l-.08.07h-.21l-.07-.07c-2.05-1.79-4-3.47-5.76-4.95l0,0c-5-4.24-9.29-7.9-12.23-11.45a20.73,20.73,0,0,1-3.36-5.4,13.29,13.29,0,0,1-1-5.2,13.2,13.2,0,0,1,3.29-9A11,11,0,0,1,13.84,5.2a10.13,10.13,0,0,1,6.3,2.18,13.94,13.94,0,0,1,2.68,2.8L24,11.79a1.26,1.26,0,0,0,2,0l1.16-1.6a13.47,13.47,0,0,1,2.68-2.81,10.13,10.13,0,0,1,6.3-2.18,10.93,10.93,0,0,1,8.13,3.54,13.11,13.11,0,0,1,3.3,9,13.47,13.47,0,0,1-1,5.2A21,21,0,0,1,43.19,28.31Z"
+                            transform="translate(0 -2.79)" />
+                        <path class="save-color2 svg-color"
+                            d="M50,17.71c0,4.2-1.57,8.06-5,12.14-3,3.64-7.36,7.34-12.39,11.63l-.13.11c-1.64,1.4-3.68,3.14-5.76,5a2.7,2.7,0,0,1-3.54,0c-2-1.76-3.95-3.41-5.66-4.87l-.1-.09C12.39,37.27,8,33.54,5,29.85,1.57,25.77,0,21.91,0,17.71A15.54,15.54,0,0,1,3.94,7.1a13.31,13.31,0,0,1,9.9-4.31,12.45,12.45,0,0,1,7.78,2.68,16.2,16.2,0,0,1,3.16,3.3.29.29,0,0,0,.22.11.28.28,0,0,0,.23-.11,16.15,16.15,0,0,1,3.15-3.3,12.45,12.45,0,0,1,7.78-2.68,13.31,13.31,0,0,1,9.9,4.31A15.54,15.54,0,0,1,50,17.71Z"
+                            transform="translate(0 -2.79)" />
+                    </svg>
+                </button>
             </div>
             <div class="name">布朗尼甜甜圈</div>
             <div class="price">NT$250</div>
+        </div>
+    </div>
+
+    <div class="modal fade add-modal" id="add1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-bs-dismiss="modal">
+                        <img src="./public/img/cross.png" alt="">
+                    </button>
+                    <div class="pic">
+                        <div class="pic-box" style="background-image:url(./public/img/sele-prod1.jpeg)">
+                            <img src="./public/img/sele-prod1.jpeg" alt="藍莓塔">
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="name">藍莓塔</div>
+                        <div class="spec">
+                            <ul>
+                                <li>大</li>
+                                <li>中</li>
+                                <li>小</li>
+                            </ul>
+                        </div>
+                        <button class="add">加入購物車</button>
+                        <div class="price">NT$450</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade add-modal" id="add2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-bs-dismiss="modal">
+                        <img src="./public/img/cross.png" alt="">
+                    </button>
+                    <div class="pic">
+                        <div class="pic-box" style="background-image:url(./public/img/sele-prod2.jpeg)">
+                            <img src="./public/img/sele-prod2.jpeg" alt="薑餅蛋糕">
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="name">薑餅蛋糕</div>
+                        <div class="spec">
+                            <ul>
+                                <li>草莓</li>
+                                <li>巧克力</li>
+                                <li>奶油</li>
+                            </ul>
+                        </div>
+                        <button class="add">加入購物車</button>
+                        <div class="price">NT$480</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade add-modal" id="add3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-bs-dismiss="modal">
+                        <img src="./public/img/cross.png" alt="">
+                    </button>
+                    <div class="pic">
+                        <div class="pic-box" style="background-image:url(./public/img/sele-prod3.jpeg)">
+                            <img src="./public/img/sele-prod3.jpeg" alt="蛋糕小總匯">
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="name">蛋糕小總匯</div>
+                        <div class="spec">
+                            <ul>
+                                <li>4塊/盒</li>
+                                <li>6塊/盒</li>
+                                <li>10塊/盒</li>
+                            </ul>
+                        </div>
+                        <button class="add">加入購物車</button>
+                        <div class="price">NT$140</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade add-modal" id="add4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-bs-dismiss="modal">
+                        <img src="./public/img/cross.png" alt="">
+                    </button>
+                    <div class="pic">
+                        <div class="pic-box" style="background-image:url(./public/img/sele-prod4.jpeg)">
+                            <img src="./public/img/sele-prod4.jpeg" alt="布朗尼甜甜圈">
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <div class="name">布朗尼甜甜圈</div>
+                        <div class="spec">
+                            <ul>
+                                <li>4塊/盒</li>
+                                <li>6塊/盒</li>
+                                <li>10塊/盒</li>
+                            </ul>
+                        </div>
+                        <button class="add">加入購物車</button>
+                        <div class="price">NT$250</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -284,12 +680,17 @@
     <!-- 品牌故事 -->
     <h2 class="main-title">品牌故事</h2>
     <div id="story">
-        <div class="text">
-            <p>Yuki、Lina、Reta是三個到北部攻讀餐飲系的南部女孩，儘管三人能夠彼此互相照應，但少了那份來自家鄉的草莓香，難免還是令人黯然神傷。</p>
-            <p>有天他們突發奇想，不如就利用他們的專業，將南部草莓與麵包結合，並且把這份來自南部的溫暖帶來北部。於是女孩們開始在宿舍嘗試各種草莓與麵包的搭配。</p>
-            <p>隨著日子一天一天過去，女孩們所調配的草莓麵包皆獲得了同學的好評，不只系上的同學搶著要購買，就連系外同學也一窩蜂搶購，女孩們從來沒有想過，憑著他們對家鄉純粹的思念，也能夠讓更多人認識南部草莓的美味。</p>
+        <div class="bg-color">
+            <img src="./public/img/story.png" alt="品牌故事" class="pic">
         </div>
-        <img src="./public/img/story.png" alt="品牌故事" class="pic">
+        <div class="container">
+            <div class="text">
+                <p>Yuki、Lina、Reta是三個到北部攻讀餐飲系的南部女孩，儘管三人能夠彼此互相照應，但少了那份來自家鄉的草莓香，難免還是令人黯然神傷。</p>
+                <p>有天他們突發奇想，不如就利用他們的專業，將南部草莓與麵包結合，並且把這份來自南部的溫暖帶來北部。於是女孩們開始在宿舍嘗試各種草莓與麵包的搭配。</p>
+                <p>隨著日子一天一天過去，女孩們所調配的草莓麵包皆獲得了同學的好評，不只系上的同學搶著要購買，就連系外同學也一窩蜂搶購，女孩們從來沒有想過，憑著他們對家鄉純粹的思念，也能夠讓更多人認識南部草莓的美味。
+                </p>
+            </div>
+        </div>
     </div>
 
 
@@ -298,62 +699,77 @@
     <h2 class="main-title">最新消息</h2>
     <div class="new">
         <div class="bg-color">
-            <div class="container">
+        </div>
+        <div class="container">
+            <div class="pic-box" style="background-image: url(./public/img/new-pic1.png);">
                 <img src="./public/img/new-pic1.png" alt="最新消息" class="new-pic">
-                <div class="text">
-                    <h3>一月新品溫暖上市</h3>
-                    <p class="date">2020/01/29</p>
-                    <p class="content">
-                        冷颼颼的新年，有想好回家鄉的伴手禮了嗎？<br>
-                        Yolita為您精心準備暖心的過年禮盒、蛋糕<br>
-                        讓您可以陪伴家人溫暖度過新年喔！
-                    </p>
-                </div>
+            </div>
+            <div class="text">
+                <h3>一月新品溫暖上市</h3>
+                <p class="date">2020/01/29</p>
+                <p class="content">
+                    冷颼颼的新年，有想好回家鄉的伴手禮了嗎？<br>
+                    Yolita為您精心準備暖心的過年禮盒、蛋糕<br>
+                    讓您可以陪伴家人溫暖度過新年喔！
+                </p>
             </div>
         </div>
     </div>
     <div class="new">
         <div class="bg-color">
-            <div class="container">
+        </div>
+        <div class="container">
+            <div class="pic-box" style="background-image: url(./public/img/new-pic2.png)">
                 <img src="./public/img/new-pic2.png" alt="最新消息" class="new-pic">
-                <div class="text">
-                    <h3>粉紅風暴來襲！紅寶石巧克力粉嫩上市</h3>
-                    <p class="date">2020/01/01</p>
-                    <p class="content">
-                        Yolita又研發出新產品囉！<br>
-                        粉嫩粉嫩的外表，是不是讓女孩子都想戀愛了呢？<br>
-                        別猶豫了！快來買吧！
-                    </p>
-                </div>
+            </div>
+            <div class="text">
+                <h3>粉紅風暴來襲！紅寶石巧克力粉嫩上市</h3>
+                <p class="date">2020/01/01</p>
+                <p class="content">
+                    Yolita又研發出新產品囉！<br>
+                    粉嫩粉嫩的外表，是不是讓女孩子都想戀愛了呢？<br>
+                    別猶豫了！快來買吧！
+                </p>
             </div>
         </div>
     </div>
 
 
     <h2 class="main-title">門市據點</h2>
-    <div id="store">
-        <div class="overflow-box">
-            <div class="hover-box">
-                <h3>台北總店</h3>
+    <div id="store" class="container">
+        <div class="row">
+            <div class="overflow-box col-lg-4 col-md-4">
+                <div class="pic">
+                    <div class="pic-box" style="background-image:url(./public/img/store1.png)">
+                        <img src="./public/img/store1.png" alt="台北總店">
+                        <div class="hover-box">
+                            <h3>台北總店</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="store-name">台北總店</div>
             </div>
-            <div class="pic-box" style="background-image:url(./public/img/store1.png)">
-                <img src="./public/img/store1.png" alt="台北總店">
+            <div class="overflow-box col-lg-4 col-md-4">
+                <div class="pic">
+                    <div class="pic-box" style="background-image:url(./public/img/store2.png)">
+                        <img src="./public/img/store2.png" alt="中壢分店">
+                        <div class="hover-box">
+                            <h3>中壢分店</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="store-name">中壢分店</div>
             </div>
-        </div>
-        <div class="overflow-box">
-            <div class="hover-box">
-                <h3>中壢分店</h3>
-            </div>
-            <div class="pic-box" style="background-image:url(./public/img/store2.png)">
-                <img src="./public/img/store2.png" alt="中壢分店">
-            </div>
-        </div>
-        <div class="overflow-box">
-            <div class="hover-box">
-                <h3>台中分店</h3>
-            </div>
-            <div class="pic-box" style="background-image:url(./public/img/store3.png)">
-                <img src="./public/img/store3.png" alt="台中分店">
+            <div class="overflow-box col-lg-4 col-md-4">
+                <div class="pic">
+                    <div class="pic-box" style="background-image:url(./public/img/store3.png)">
+                        <img src="./public/img/store3.png" alt="台中分店">
+                        <div class="hover-box">
+                            <h3>台中分店</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="store-name">台中分店</div>
             </div>
         </div>
     </div>
@@ -361,27 +777,32 @@
 
     <h2 class="main-title">聯絡我們</h2>
     <div id="contact">
-        <div class="pic-box">
+        <div class="pic-box" style="background-image: url(./public/img/contact.jpg);">
             <img src="./public/img/contact.jpg" alt="聯絡我們">
         </div>
-        <form action="mailto:yl301114@gmail.com">
-            <label for="name">
-                <img src="./public/img/name.png" alt="姓名">
-            </label>
-            <input type="text" id="name" placeholder="姓名" required>
-
-            <label for="mail">
-                <img src="./public/img/mail.png" alt="信箱">
-            </label>
-            <input type="email" id="mail" placeholder="信箱" required>
-
-            <label for="phone">
-                <img src="./public/img/phone.png" alt="電話">
-            </label>
-            <input type="number" id="phone" placeholder="電話" required>
-
-            <button id="send">送出</button>
-        </form>
+        <div class="container">
+            <form action="mailto:yl301114@gmail.com">
+                <div class="mb-4">
+                    <label for="name">
+                        <img src="./public/img/name.png" alt="姓名">
+                    </label>
+                    <input type="text" id="name" placeholder="姓名" required>
+                </div>
+                <div class="mb-4">
+                    <label for="mail">
+                        <img src="./public/img/mail.png" alt="信箱">
+                    </label>
+                    <input type="email" id="mail" placeholder="信箱" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone">
+                        <img src="./public/img/phone.png" alt="電話">
+                    </label>
+                    <input type="number" id="phone" placeholder="電話" required>
+                </div>
+                <button id="send">送出</button>
+            </form>
+        </div>
     </div>
 
     <!-- footer -->
@@ -394,17 +815,27 @@
                     <li><a href="#" class="footer-main-title">最新消息</a></li>
                     <li><a href="#" class="footer-main-title">門市據點</a></li>
                     <li><a href="#" class="footer-main-title">聯絡我們</a></li>
+                    <div class="btn-box">
+                        <button class="redCircle social-box">
+                            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+                        </button>
+                        <button class="redCircle social-box">
+                            <a href="#"> <i class="fab fa-instagram"></i></a>
+                        </button>
+                    </div>
                 </ul>
                 <p id="CopyRight">Copyright &copy;Yolita All Rights Reserved.</p>
             </div>
             <div class="f-right-box">
-                <button class="redCircle social-box">
-                    <a href="#"> <i class="fab fa-facebook-f"></i></a>
-                </button>
-                <button class="redCircle social-box">
-                    <a href="#"> <i class="fab fa-instagram"></i></a>
-                </button>
                 <img src="./public/img/logo.png" alt="logo">
+                <div class="btn-box">
+                    <button class="redCircle social-box">
+                        <a href="#"> <i class="fab fa-facebook-f"></i></a>
+                    </button>
+                    <button class="redCircle social-box">
+                        <a href="#"> <i class="fab fa-instagram"></i></a>
+                    </button>
+                </div>
             </div>
         </div>
     </footer>
@@ -412,14 +843,11 @@
 
 
     <!-- Bootstrap JS CDN -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
         crossorigin="anonymous"></script>
 
     <!-- jQuery CDN -->
